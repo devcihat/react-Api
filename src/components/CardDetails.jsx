@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const NEW_KEY = "cb216ec1dfbf0af79b80b13d70b07143";
 
-function CardDetail(props) {
+function CardDetails(props) {
   const pageVariants = {
     in: {
       opacity: 1,
@@ -105,4 +105,4 @@ function CardDetail(props) {
   );
 }
 
-export default CardDetail;
+export default CardDetails;
