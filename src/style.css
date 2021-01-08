@@ -60,3 +60,7 @@ body {
     transform: rotate(359deg);
   }
 } */
+.footer-back {
+  background-color: black !important;
+  color: white !important;
+}

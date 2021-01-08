@@ -72,17 +72,19 @@ function App() {
                     <Card key={item.id} movie={item} />
                   ))}
               </Route>
-              <Route path="/movie/:movieID">
-                <CardDetails movies={movies} />
-              </Route>
+              <div className="col">
+                <Route path="/movie/:movieID">
+                  <CardDetails movies={movies} />
+                </Route>
+              </div>
               <Route path="/404">
                 <ERROR404 />
               </Route>
               <Redirect from="*" to="/404" />
             </Switch>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
