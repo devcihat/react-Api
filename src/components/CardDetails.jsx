@@ -29,7 +29,7 @@ function CardDetail(props) {
     params.movieID
   }?api_key=${NEW_KEY}&language=en-US/`;
 
-  const SIM_API = `https://api.themoviedb.org/3/movie/${
+  const NEW_API = `https://api.themoviedb.org/3/movie/${
     params.movieID
   }/similar?api_key=${NEW_KEY}&language=en-US&page=1`;
   // console.log(params);
@@ -41,7 +41,7 @@ function CardDetail(props) {
       setMovie(response.data);
     });
 
-    axios.get(SIM_API).then(response => {
+    axios.get(NEW_API).then(response => {
       setSuggested(response.data.results);
     });
   }, [movie]);
@@ -84,7 +84,7 @@ function CardDetail(props) {
           {movie.overview}
         </p>
         <div className="d-flex text-white justify-content-between">
-          <p>IMDB RATING: {movie.vote_average}</p>
+          <p>IMDB: {movie.vote_average}</p>
           <p>{movie.release_date}</p>
         </div>
       </div>
