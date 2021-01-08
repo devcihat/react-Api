@@ -1,0 +1,62 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #223343 !important;
+}
+
+.vote {
+  display: flex;
+  float: right;
+}
+
+.movie-over {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #22254b;
+  padding: 1rem;
+}
+
+.tag {
+  border-radius: 12px;
+  padding: 0.5rem;
+  float: right;
+  background-color: black;
+}
+
+.tag.green {
+  color: green;
+}
+
+.tag.orange {
+  color: orange;
+}
+
+.tag.white {
+  color: white;
+}
+
+.footer {
+  color: white;
+}
+/* 
+.box:hover {
+  animation: boxyRotation 1s infinite linear;
+}
+
+@keyframes boxyRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+} */
