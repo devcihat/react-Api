@@ -23,7 +23,7 @@ function ERROR404(props) {
         ref={container}
       >
         <Link to="/" className="text-white">
-          <i className="fas fa-directions fa-lg mx-3" /> Home Page
+          <i className="fas fa-directions fa-lg mx-1" /> Home Page
         </Link>
       </div>
     </div>

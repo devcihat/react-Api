@@ -55,17 +55,16 @@ function CardDetails(props) {
       className="col-sm-6 offset-sm-3"
     >
       <nav
-        style={{ backgroundColor: "white" }}
         aria-label="breadcrumb"
-        className="mb-5"
+        className="my-3 d-flex justify-content-center breadcrumb"
       >
-        <ol className="breadcrumb mt-4">
-          <li className="breadcrumb-item text-center text-white">
-            <Link className="ms-5 mb-3" to="/">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
+            <Link className="text-white" to="/">
               Home
             </Link>
           </li>
-          <li className="breadcrumb-item active mb-3" aria-current="page">
+          <li className="breadcrumb-item title text-white" aria-current="page">
             {movie.title}
           </li>
         </ol>
