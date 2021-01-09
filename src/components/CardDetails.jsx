@@ -52,7 +52,7 @@ function CardDetails(props) {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="col-sm-6 offset-sm-3"
+      className="col-xl-3 col-lg-3 col-md-6  offset-sm-3"
     >
       <nav
         aria-label="breadcrumb"
