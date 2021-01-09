@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "../style.css";
 import Card from "./Card";
 
+
 import { motion } from "framer-motion";
 
 const NEW_KEY = "cb216ec1dfbf0af79b80b13d70b07143";
@@ -61,6 +62,7 @@ function CardDetails(props) {
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <Link className="text-white" to="/">
+              <img src={Animation} />
               Home
             </Link>
           </li>
