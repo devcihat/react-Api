@@ -9,7 +9,7 @@ function Navbar() {
         <Link className="navbar-brand" to="/">
           <iframe
             src="https://giphy.com/embed/1gdoeJmc3piKTeORzG"
-            width="30"
+            width="40"
             height="30"
           />
           <b>Movie Storage</b>
