@@ -30,7 +30,7 @@ function App() {
         .then(response => response.json())
         .then(data => setMovies(data.results));
       setIsLoad(false);
-    }, 2000);
+    }, 3000);
   }
 
   const submitForm = event => {
@@ -49,11 +49,13 @@ function App() {
                 <div className="row">
                   {isLoad ? (
                     <div className="loading d-flex flex-column justify-content-center align-items-center">
-                      <iframe
-                        src="https://giphy.com/embed/TgIYyTtnOwX0NR4JOg"
-                        width="480"
-                        height="480"
-                        class="giphy-embed"
+                      <lottie-player
+                        src="https://assets2.lottiefiles.com/packages/lf20_8y9IYf.json"
+                        background="transparent"
+                        speed="1"
+                        style={{ width: "300px", height: "300px" }}
+                        loop
+                        autoplay
                       />
                     </div>
                   ) : (
