@@ -17,7 +17,11 @@ function ERROR404(props) {
 
   return (
     <div>
-      <div className="container text-center " ref={container}>
+      <div
+        style={{ maxWidth: "600px" }}
+        className="container text-center "
+        ref={container}
+      >
         <Link to="/" className="text-white">
           <i className="fas fa-directions fa-lg mx-3" /> Home Page
         </Link>
