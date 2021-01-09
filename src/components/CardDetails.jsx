@@ -66,7 +66,7 @@ function CardDetails(props) {
             </Link>
           </li>
           <li className="breadcrumb-item title text-white" aria-current="page">
-            <i class="fas fa-film mx-1 fa-lg" />
+            <i className="fas fa-film mx-1 fa-lg" />
             {movie.title}
           </li>
         </ol>
