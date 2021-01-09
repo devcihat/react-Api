@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     setIsLoad(true);
     Search(query);
-    setIsLoad(true);
+    setIsLoad(false);
   }, []);
 
   function Search(query) {
