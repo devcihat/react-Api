@@ -45,7 +45,7 @@ function Card(props) {
       exit="out"
       variants={pageTransition}
       transition={aboutTransition}
-      className="col-xs-3 col-md-4 mb-4"
+      className="col-xl-3 col-lg-3 col-md-6  mb-4"
     >
       <div className="card box">
         <img
