@@ -74,7 +74,9 @@ function App() {
               </Route>
 
               <Route path="/movie/:movieID">
-                <CardDetails movies={movies} />
+                
+                  <CardDetails movies={movies} />
+               
               </Route>
 
               <Route path="/404">
