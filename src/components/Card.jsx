@@ -35,7 +35,8 @@ function Card(props) {
     poster_path,
     overview,
     release_date,
-    vote_average
+    vote_average,
+    popularity
   } = props.movie;
   // console.log(props);
   return (
