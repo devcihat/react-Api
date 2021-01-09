@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import lottie from "lottie-web";
 
 function ERROR404(props) {
+  const container = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("./notFound.json")
+    });
+  }, []);
+
   return (
     <div>
-      <img
-        src="https://www.pngkit.com/png/detail/930-9306658_404-not-found.png"
-        className="w-100"
-        alt=""
-      />
-
-      <h2 className="pt-3">
-        <Link to="/" className="">
-          Home Page
+      <div className="container text-center " ref={container}>
+        <Link to="/" className="text-white">
+          <i className="fas fa-directions fa-lg mx-3" /> Home Page
         </Link>
-      </h2>
+      </div>
     </div>
   );
 }

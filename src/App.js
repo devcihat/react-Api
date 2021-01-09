@@ -72,11 +72,11 @@ function App() {
                     <Card key={item.id} movie={item} />
                   ))}
               </Route>
-              <div className="col">
-                <Route path="/movie/:movieID">
-                  <CardDetails movies={movies} />
-                </Route>
-              </div>
+
+              <Route path="/movie/:movieID">
+                <CardDetails movies={movies} />
+              </Route>
+
               <Route path="/404">
                 <ERROR404 />
               </Route>
