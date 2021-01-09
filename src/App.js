@@ -13,16 +13,24 @@ const API_KEY = "cb216ec1dfbf0af79b80b13d70b07143";
 function App() {
   const [query, setQuery] = useState("matrix");
   const [movies, setMovies] = useState([]);
+  const [isLoad, setIsLoad] = useState(false);
 
   useEffect(() => {
+    setIsLoad(true);
     Search(query);
+    setIsLoad(false);
   }, []);
 
   function Search(query) {
+    setIsLoad(true);
+
     const URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${query}`;
-    fetch(URL)
-      .then(response => response.json())
-      .then(data => setMovies(data.results));
+    setTimeout(() => {
+      fetch(URL)
+        .then(response => response.json())
+        .then(data => setMovies(data.results));
+      setIsLoad(false);
+    }, 2000);
   }
 
   const submitForm = event => {
@@ -38,39 +46,56 @@ function App() {
           <div className="row pt-3">
             <Switch>
               <Route exact path="/">
-                <div className="col-sm-12">
-                  <h1 className="text-center text-white mb-3">Movie App</h1>
-                </div>
-                <div className="col-sm-12 mb-3">
-                  <form>
-                    <div className="row ">
-                      <div className="col-lg-9 mb-3">
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Search"
-                          name="query"
-                          onChange={event => setQuery(event.target.value)}
-                        />
-                      </div>
-                      <div className="col-lg-3">
-                        <button
-                          onClick={submitForm}
-                          type="submit"
-                          className="btn btn-primary"
-                        >
-                          Search Movie
-                        </button>
-                      </div>
+                <div className="row">
+                  {isLoad ? (
+                    <div className="loading d-flex flex-column justify-content-center align-items-center">
+                      <iframe
+                        src="https://giphy.com/embed/TgIYyTtnOwX0NR4JOg"
+                        width="480"
+                        height="480"
+                        class="giphy-embed"
+                      />
                     </div>
-                  </form>
-                </div>
+                  ) : (
+                    <>
+                      <div className="col-sm-12">
+                        <h1 className="text-center text-white mb-3">
+                          Movie App
+                        </h1>
+                      </div>
+                      <div className="col-sm-12 mb-3">
+                        <form>
+                          <div className="row ">
+                            <div className="col-lg-9 mb-3">
+                              <input
+                                type="text"
+                                className="form-control"
+                                placeholder="Search"
+                                name="query"
+                                onChange={event => setQuery(event.target.value)}
+                              />
+                            </div>
+                            <div className="col-lg-3">
+                              <button
+                                onClick={submitForm}
+                                type="submit"
+                                className="btn btn-primary"
+                              >
+                                Search Movie
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
 
-                {movies
-                  .filter(item => item.poster_path)
-                  .map(item => (
-                    <Card key={item.id} movie={item} />
-                  ))}
+                      {movies
+                        .filter(item => item.poster_path)
+                        .map(item => (
+                          <Card key={item.id} movie={item} />
+                        ))}
+                    </>
+                  )}
+                </div>
               </Route>
 
               <Route path="/movie/:movieID">
