@@ -41,8 +41,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
-      <div className="container">
+<div className="container">
         <div className="row pt-3">
           <Switch>
             <Route exact path="/">
