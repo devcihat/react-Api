@@ -52,7 +52,7 @@ function CardDetails(props) {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="col-xl-6 offset-sm-3"
+      className="container"
     >
       <nav
         aria-label="breadcrumb"
@@ -74,7 +74,7 @@ function CardDetails(props) {
 
       <img
         src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-        className="card-img-top mb-3"
+        className="card-img-top  mb-3"
         alt="..."
       />
       <h1 className="text-white text-center mb-3">{movie.title}</h1>
