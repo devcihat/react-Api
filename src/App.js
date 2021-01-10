@@ -41,78 +41,75 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div>
-        <div className="container">
-          <div className="row pt-3">
-            <Switch>
-              <Route exact path="/">
-                <div className="row">
-                  {isLoad ? (
-                    <div className="loading d-flex flex-column justify-content-center align-items-center">
-                      <lottie-player
-                        src="https://assets2.lottiefiles.com/packages/lf20_8y9IYf.json"
-                        background="transparent"
-                        speed="1"
-                        style={{ width: "300px", height: "300px" }}
-                        loop
-                        autoplay
-                      />
+
+      <div className="container">
+        <div className="row pt-3">
+          <Switch>
+            <Route exact path="/">
+              <div className="row">
+                {isLoad ? (
+                  <div className="loading d-flex flex-column justify-content-center align-items-center">
+                    <lottie-player
+                      src="https://assets2.lottiefiles.com/packages/lf20_8y9IYf.json"
+                      background="transparent"
+                      speed="1"
+                      style={{ width: "300px", height: "300px" }}
+                      loop
+                      autoplay
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <div className="col-sm-12">
+                      <h1 className="text-center text-white mb-3">Movie App</h1>
                     </div>
-                  ) : (
-                    <>
-                      <div className="col-sm-12">
-                        <h1 className="text-center text-white mb-3">
-                          Movie App
-                        </h1>
-                      </div>
-                      <div className="col-sm-12 mb-3">
-                        <form>
-                          <div className="row ">
-                            <div className="col-lg-9 mb-3">
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Search"
-                                name="query"
-                                onChange={event => setQuery(event.target.value)}
-                              />
-                            </div>
-                            <div className="col-lg-3">
-                              <button
-                                onClick={submitForm}
-                                type="submit"
-                                className="btn btn-primary"
-                              >
-                                Search Movie
-                              </button>
-                            </div>
+                    <div className="col-sm-12 mb-3">
+                      <form>
+                        <div className="row ">
+                          <div className="col-lg-9 mb-3">
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Search"
+                              name="query"
+                              onChange={event => setQuery(event.target.value)}
+                            />
                           </div>
-                        </form>
-                      </div>
+                          <div className="col-lg-3">
+                            <button
+                              onClick={submitForm}
+                              type="submit"
+                              className="btn btn-primary"
+                            >
+                              Search Movie
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
 
-                      {movies
-                        .filter(item => item.poster_path)
-                        .map(item => (
-                          <Card key={item.id} movie={item} />
-                        ))}
-                    </>
-                  )}
-                </div>
-              </Route>
+                    {movies
+                      .filter(item => item.poster_path)
+                      .map(item => (
+                        <Card key={item.id} movie={item} />
+                      ))}
+                  </>
+                )}
+              </div>
+            </Route>
 
-              <Route path="/movie/:movieID">
-                <CardDetails movies={movies} />
-              </Route>
+            <Route path="/movie/:movieID">
+              <CardDetails movies={movies} />
+            </Route>
 
-              <Route path="/404">
-                <ERROR404 />
-              </Route>
-              <Redirect from="*" to="/404" />
-            </Switch>
-          </div>
+            <Route path="/404">
+              <ERROR404 />
+            </Route>
+            <Redirect from="*" to="/404" />
+          </Switch>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
