@@ -52,7 +52,7 @@ function CardDetails(props) {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="col-xl-6 col-lg-3 col-md-6  offset-sm-3"
+      className="col-xl-12 col-lg-12 col-md-12"
     >
       <nav
         aria-label="breadcrumb"
@@ -94,7 +94,7 @@ function CardDetails(props) {
       </h2>
 
       <div className="row">
-        <div className="d-flex flex-wrap mx-1">
+        <div className="d-flex flex-wrap">
           {suggested
             .filter(item => item.poster_path)
             .map(item => (
