@@ -52,7 +52,7 @@ function CardDetails(props) {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
-      className="col-xl-12 col-lg-12 col-md-12"
+      className="col-xl-6 offset-sm-3"
     >
       <nav
         aria-label="breadcrumb"
@@ -71,36 +71,34 @@ function CardDetails(props) {
           </li>
         </ol>
       </nav>
-      <div>
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-          className="card-img-top mb-3"
-          alt="..."
-        />
-        <h1 className="text-white text-center mb-3">{movie.title}</h1>
-        <p
-          style={{ lineHeight: "28px" }}
-          className="text-dark img-thumbnail text-center"
-        >
-          {movie.overview}
-        </p>
-        <div className="d-flex text-white justify-content-between">
-          <p>IMDB: {movie.vote_average}</p>
-          <p>{movie.release_date}</p>
-        </div>
+
+      <img
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+        className="card-img-top mb-3"
+        alt="..."
+      />
+      <h1 className="text-white text-center mb-3">{movie.title}</h1>
+      <p
+        style={{ lineHeight: "28px" }}
+        className="text-dark img-thumbnail text-center"
+      >
+        {movie.overview}
+      </p>
+      <div className="d-flex text-white justify-content-between">
+        <p>IMDB: {movie.vote_average}</p>
+        <p>{movie.release_date}</p>
       </div>
+
       <h2 className="mb-3 text-dark img-thumbnail text-center ">
         SUGGESTED MOVIES
       </h2>
 
       <div className="row">
-        <div className="d-flex flex-wrap">
-          {suggested
-            .filter(item => item.poster_path)
-            .map(item => (
-              <Card key={item.id} movie={item} />
-            ))}
-        </div>
+        {suggested
+          .filter(item => item.poster_path)
+          .map(item => (
+            <Card key={item.id} movie={item} />
+          ))}
       </div>
     </motion.div>
   );
