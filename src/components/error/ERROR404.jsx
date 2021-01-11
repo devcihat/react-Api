@@ -18,7 +18,7 @@ function ERROR404(props) {
   return (
     <div>
       <div
-        style={{ maxWidth: "600px" }}
+        
         className="container text-center "
         ref={container}
       >
