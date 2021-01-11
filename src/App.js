@@ -30,7 +30,7 @@ function App() {
         .then(response => response.json())
         .then(data => setMovies(data.results));
       setIsLoad(false);
-    }, 3000);
+    }, 2000);
   }
 
   const submitForm = event => {
