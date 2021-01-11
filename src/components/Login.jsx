@@ -8,7 +8,7 @@ function Login(props) {
           <lottie-player
             src="https://assets6.lottiefiles.com/packages/lf20_yjlOdw.json"
             background="transparent"
-            speed="1"
+            speed="3"
             loop
             autoplay
           />
