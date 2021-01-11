@@ -15,14 +15,7 @@ function Navbar() {
 
           <b>Movie Storage</b>
         </Link>
-        <form className="d-flex">
-          <input
-            className="form-control me-2 text-center nav-search"
-            type="search"
-            placeholder="Search Movie"
-            aria-label="Search"
-          />
-        </form>
+       
 
         <div style={{ cursor: "pointer" }}>
           <Link to="/login">
