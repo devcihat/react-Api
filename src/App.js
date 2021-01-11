@@ -32,7 +32,7 @@ function App() {
     setIsLoad(true);
     setTimeout(() => {
       fetch(MOVIE_API + query)
-        .then(rsp => rsp.json())
+        .then(response => response.json())
         .then(data => setMovies(data.results));
       setIsLoad(false);
     }, 2000);
