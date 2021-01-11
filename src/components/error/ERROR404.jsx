@@ -21,7 +21,7 @@ function ERROR404(props) {
         <div className="col-xs-12 col-lg-12">
           <div className="text-center " ref={container}>
             <Link to="/" className="text-white">
-              <i className="fas fa-directions fa-lg mx-1" /> Home Page
+              <i className="fas fa-directions fa-lg mx-1" /> <b>Home Page</b>
             </Link>
           </div>
         </div>
