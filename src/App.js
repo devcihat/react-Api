@@ -12,31 +12,27 @@ import Footer from "./components/Footer";
 const API_KEY = "cb216ec1dfbf0af79b80b13d70b07143";
 
 function App() {
-  const [query, setQuery] = useState("matrix");
+  const [query, setQuery] = useState();
   const [movies, setMovies] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
 
+  const POPULAR_KEY = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1&include_adult=false`;
+  const MOVIE_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=/`;
+
   useEffect(() => {
-    setIsLoad(true);
-    Search(query);
-    setIsLoad(false);
+    fetch(POPULAR_KEY)
+      .then(response => response.json())
+      .then(info => {
+        setMovies(info.results);
+      });
   }, []);
-
-  function Search(query) {
-    setIsLoad(true);
-
-    const URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${query}`;
-    setTimeout(() => {
-      fetch(URL)
-        .then(response => response.json())
-        .then(data => setMovies(data.results));
-      setIsLoad(false);
-    }, 2000);
-  }
 
   const submitForm = event => {
     event.preventDefault();
-    Search(query);
+
+    fetch(MOVIE_API + query)
+      .then(rsp => rsp.json())
+      .then(data => setMovies(data.results));
   };
 
   return (
@@ -72,6 +68,7 @@ function App() {
                               className="form-control"
                               placeholder="Search"
                               name="query"
+                              value={query}
                               onChange={event => setQuery(event.target.value)}
                             />
                           </div>
