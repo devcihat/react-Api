@@ -29,10 +29,13 @@ function App() {
 
   const submitForm = event => {
     event.preventDefault();
-
-    fetch(MOVIE_API + query)
-      .then(rsp => rsp.json())
-      .then(data => setMovies(data.results));
+    setIsLoad(true);
+    setTimeout(() => {
+      fetch(MOVIE_API + query)
+        .then(rsp => rsp.json())
+        .then(data => setMovies(data.results));
+      setIsLoad(false);
+    }, 2000);
   };
 
   return (
