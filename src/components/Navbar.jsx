@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MovieGif from "./movie.gif";
+import "../style.css";
 
 function Navbar() {
   return (
@@ -12,12 +12,22 @@ function Navbar() {
             width="40"
             height="30"
           />
+
           <b>Movie Storage</b>
         </Link>
+        <form className="d-flex">
+          <input
+            className="form-control me-2 text-center nav-search"
+            type="search"
+            placeholder="Search Movie"
+            aria-label="Search"
+          />
+        </form>
 
         <div style={{ cursor: "pointer" }}>
-          <i className="far fa-user fa-lg mx-2" />
-          <i className="fas fa-sign-in-alt fa-lg" />
+          <Link to="/login">
+            <i className="fas fa-sign-in-alt fa-lg text-dark" />
+          </Link>
         </div>
       </div>
     </nav>

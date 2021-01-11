@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ERROR404 from "./components/error/ERROR404";
 import Card from "./components/Card";
 import CardDetails from "./components/CardDetails";
+import Login from "./components/Login";
 import Footer from "./components/Footer";
 
 const API_KEY = "cb216ec1dfbf0af79b80b13d70b07143";
@@ -41,7 +42,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-<div className="container">
+      <div className="container cont-footer">
         <div className="row pt-3">
           <Switch>
             <Route exact path="/">
@@ -99,6 +100,10 @@ function App() {
 
             <Route path="/movie/:movieID">
               <CardDetails movies={movies} />
+            </Route>
+
+            <Route path="/login">
+              <Login />
             </Route>
 
             <Route path="/404">

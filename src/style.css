@@ -9,6 +9,11 @@ body {
   background-color: #223343 !important;
 }
 
+root,
+container {
+  width: 100%;
+}
+
 .vote {
   display: flex;
   float: right;
@@ -62,6 +67,14 @@ body {
   color: #fff;
 }
 
+.nav-search {
+  max-width: 440px !important;
+}
+
+.footer {
+  margin-top: 300px;
+}
+
 /* 
 .box:hover {
   animation: boxyRotation 1s infinite linear;
@@ -78,4 +91,6 @@ body {
 .footer-back {
   background-color: #111 !important;
   color: white !important;
+  bottom: 0;
+  max-width: 100%;
 }

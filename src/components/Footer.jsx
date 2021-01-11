@@ -25,7 +25,7 @@ function Footer(props) {
         exit="out"
         variants={pageVariants}
         transition={pageTransition}
-        className=" my-md-4 pt-md-4 sticky-bottom "
+        className="my-md-4 pt-md-4 "
       >
         <div className="container">
           <div className="row pt-3">
