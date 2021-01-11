@@ -19,7 +19,7 @@ function CardDetails(props) {
     }
   };
   const pageTransition = {
-    duration: 2
+    duration: 1
   };
   const [movie, setMovie] = useState([]);
   const params = useParams();

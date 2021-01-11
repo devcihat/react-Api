@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Card(props) {
   const aboutTransition = {
-    duration: 2
+    duration: 1
   };
 
   const pageTransition = {

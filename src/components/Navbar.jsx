@@ -15,7 +15,6 @@ function Navbar() {
 
           <b>Movie Storage</b>
         </Link>
-       
 
         <div style={{ cursor: "pointer" }}>
           <Link to="/login">
