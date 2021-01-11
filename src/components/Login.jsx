@@ -1,5 +1,4 @@
 import React from "react";
-import "./Login.css";
 
 function Login(props) {
   return (
@@ -58,7 +57,7 @@ function Login(props) {
                 Check me out
               </label>
             </div>
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </form>
