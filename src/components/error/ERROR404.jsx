@@ -16,15 +16,15 @@ function ERROR404(props) {
   }, []);
 
   return (
-    <div>
-      <div
-        
-        className="container text-center "
-        ref={container}
-      >
-        <Link to="/" className="text-white">
-          <i className="fas fa-directions fa-lg mx-1" /> Home Page
-        </Link>
+    <div className="container">
+      <div className="row">
+        <div className="col-xs-12 col-lg-12">
+          <div className="text-center " ref={container}>
+            <Link to="/" className="text-white">
+              <i className="fas fa-directions fa-lg mx-1" /> Home Page
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
