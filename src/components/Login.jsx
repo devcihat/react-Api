@@ -4,7 +4,7 @@ function Login(props) {
   return (
     <div className="container">
       <div className="row mb-3 pt-4">
-        <div className="col-xs-12 col-lg-6">
+        <div className="col-xs-8 col-lg-6">
           <lottie-player
             src="https://assets6.lottiefiles.com/packages/lf20_yjlOdw.json"
             background="transparent"
@@ -13,7 +13,7 @@ function Login(props) {
             autoplay
           />
         </div>
-        <div className="col-xs-12 col-lg-6">
+        <div className="col-xs-6 col-lg-6">
           <form>
             <div className="mb-3">
               <label for="exampleInputEmail1" className="form-label text-white">
