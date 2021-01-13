@@ -25,7 +25,7 @@ function Contact() {
           />
         </div>
         <div className="col-xs-12 col-xl-6 col-md-6">
-          <div style={{ paddingTop: "100px" }} className="row">
+          <div className="row">
             <div className="col">
               <input
                 type="text"
