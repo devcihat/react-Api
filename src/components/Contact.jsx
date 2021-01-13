@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -52,7 +51,11 @@ function Contact() {
                 rows="3"
               />
             </div>
-            <button type="button" className="btn btn-secondary">
+            <button
+              style={{ maxWidth: "145px" }}
+              type="button"
+              className="btn btn-secondary mx-auto"
+            >
               Send
             </button>
           </div>
@@ -68,7 +71,7 @@ function Contact() {
               <a href="mailto:cihattsungu@outlook.com">
                 <i
                   style={{ fontSize: "40px" }}
-                  className="fas fa-envelope-square text-white mx-3"
+                  className="fas fa-envelope-square text-white mb-4 mx-3"
                 />
               </a>
               <a href="https://github.com/devcihat">
