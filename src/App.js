@@ -36,7 +36,7 @@ function App() {
         .then(response => response.json())
         .then(data => setMovies(data.results));
       setIsLoad(false);
-    }, 2000);
+    }, 1000);
   };
 
   return (
