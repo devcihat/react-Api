@@ -4,7 +4,7 @@ import "../style.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -30,12 +30,12 @@ function Navbar() {
 
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <Link to="/about" className="nav-link text-white me-3">
+              <Link to="/about" className="nav-link text-dark me-3">
                 <i>About</i>
               </Link>
             </li>
             <li className="nav-item ">
-              <Link to="/contact" className="nav-link text-white">
+              <Link to="/contact" className="nav-link text-dark">
                 <i>Contact</i>
               </Link>
             </li>
