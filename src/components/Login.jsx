@@ -3,7 +3,7 @@ import React from "react";
 function Login(props) {
   return (
     <div className="container">
-      <div className="row mb-3 pt-4">
+      <div className="row mb-3 ">
         <div className="col-xs-8 col-lg-6">
           <lottie-player
             src="https://assets6.lottiefiles.com/packages/lf20_yjlOdw.json"
