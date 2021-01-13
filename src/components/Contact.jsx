@@ -13,7 +13,7 @@ function Contact() {
         />
       </h3>
       <div className="row">
-        <div className="col-xs-12 col-xl-4 ">
+        <div className="col-xs-12 col-xl-4 col-md-4 ">
           <lottie-player
             style={{ width: "300px", height: "200px" }}
             src="https://assets1.lottiefiles.com/packages/lf20_bp1bwvhv.json"
@@ -23,7 +23,7 @@ function Contact() {
             autoplay
           />
         </div>
-        <div className="col-xs-12 col-xl-8 ">
+        <div className="col-xs-12 col-xl-8 col-md-8 ">
           <div className="row pt-3">
             <div className="col">
               <input
