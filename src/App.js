@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ERROR404 from "./components/error/ERROR404";
 import Card from "./components/Card";
 import CardDetails from "./components/CardDetails";
+import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 
@@ -104,6 +105,10 @@ function App() {
 
             <Route path="/login">
               <Login />
+            </Route>
+
+            <Route path="/contact">
+              <Contact />
             </Route>
 
             <Route path="/404">
