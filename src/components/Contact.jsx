@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <div className="container">
-      <h3 style={{ maxWidth: "400px" }} className="text-center mx-auto">
+      <h3 style={{ maxWidth: "400px" }} className=" mx-auto">
         <lottie-player
           src="https://assets1.lottiefiles.com/private_files/lf30_hyEOtL.json"
           background="transparent"
@@ -24,7 +24,7 @@ function Contact() {
           />
         </div>
         <div className="col-xs-12 col-xl-8 col-md-8 ">
-          <div className="row pt-3">
+          <div className="row">
             <div className="col">
               <input
                 type="text"
