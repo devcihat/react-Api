@@ -15,7 +15,7 @@ function Login(props) {
         </div>
         <div className="col-xs-6 col-lg-6">
           <form>
-            <div className="mb-3">
+            <div className="">
               <label for="exampleInputEmail1" className="form-label text-white">
                 Email address
               </label>
@@ -30,7 +30,7 @@ function Login(props) {
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <div className="mb-3">
+            <div className="">
               <label
                 for="exampleInputPassword1"
                 className="form-label text-white"
