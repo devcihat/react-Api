@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ERROR404 from "./components/error/ERROR404";
