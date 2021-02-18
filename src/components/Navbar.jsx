@@ -29,16 +29,7 @@ function Navbar() {
           </Link>
 
           <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link to="/about" className="nav-link text-dark me-3">
-                <i>About</i>
-              </Link>
-            </li>
-            <li className="nav-item ">
-              <Link to="/contact" className="nav-link text-dark">
-                <i>Contact</i>
-              </Link>
-            </li>
+            <li className="nav-item " />
           </ul>
           <form className="d-flex">
             <Link to="/login">
